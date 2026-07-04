@@ -70,7 +70,7 @@ function updateSummary() {
       (e) => `
       <div class="summary-row">
         <span>${extraLabels[e]}</span>
-        <span>+$${prices[e].toFixed(2)}</span>
+        <span>+₹${prices[e].toFixed(2)}</span>
       </div>`,
     )
     .join("");
@@ -79,11 +79,11 @@ function updateSummary() {
     <h3>Your Order</h3>
     <div class="summary-row">
       <span>${cap(order.drink)}</span>
-      <span>$${prices[order.drink].toFixed(2)}</span>
+      <span>₹${prices[order.drink].toFixed(2)}</span>
     </div>
     <div class="summary-row">
       <span>${cap(order.size)}</span>
-      <span>${prices[order.size] > 0 ? "+$" + prices[order.size].toFixed(2) : "—"}</span>
+      <span>${prices[order.size] > 0 ? "+₹" + prices[order.size].toFixed(2) : "—"}</span>
     </div>
     <div class="summary-row">
       <span>${milkLabel}</span>
@@ -93,7 +93,7 @@ function updateSummary() {
     <hr class="summary-divider" />
     <div class="summary-total">
       <span>Total</span>
-      <span>$${total.toFixed(2)}</span>
+      <span>₹${total.toFixed(2)}</span>
     </div>
   `;
 }
